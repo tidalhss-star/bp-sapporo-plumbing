@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sapporo-plumbing.node-link.shop/sitemap.xml
+Sitemap: https://hapjeong-shirt-room.node-link.shop/sitemap.xml
