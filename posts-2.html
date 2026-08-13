@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/3) · sapporo-plumbing</title>
+  <meta name="description" content="sapporo-plumbing에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://hapjeong-shirt-room.node-link.shop/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ /* Color Palette: Noir-Gold */
+ --c-bg-body: #f9f8f6;
+ --c-text-main: #333333;
+ --c-text-sub: #666666;
+ --c-accent-gold: #c5a065;
+ --c-accent-dark: #1a1a1a;
+ --c-white: #ffffff;
+ 
+ /* Typography */
+ --f-main: 'Noto Serif KR', serif;
+ --f-sans: 'Noto Sans KR', sans-serif;
+ 
+ /* Spacing & Layout */
+ --s-xs: 0.5rem;
+ --s-sm: 1rem;
+ --s-md: 2rem;
+ --s-lg: 3rem;
+ --s-xl: 4rem;
+ }
+
+ * {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ font-family: var(--f-sans);
+ background-color: var(--c-bg-body);
+ color: var(--c-text-main);
+ line-height: 1.7;
+ overflow-x: hidden;
+ }
+
+ /* Layout Utilities */
+ .container {
+ width: 90%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: var(--s-sm) 0;
+ }
+
+ section {
+ margin-bottom: var(--s-xl);
+ }
+
+ /* Typography Utilities */
+ h1, h2, h3, h4 {
+ font-family: var(--f-main);
+ color: var(--c-accent-dark);
+ line-height: 1.3;
+ }
+
+ p {
+ margin-bottom: var(--s-sm);
+ font-size: 1.05rem;
+ }
+
+ .highlight-text {
+ background-color: rgba(248, 229, 176, 0.5);
+ padding: 0 4px;
+ color: var(--c-accent-dark);
+ font-weight: 600;
+ }
+
+ /* Navigation (Hamburger Menu Style) */
+ header {
+ background-color: var(--c-white);
+ box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+ padding: 1rem 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+
+ .nav-wrapper {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .logo-text {
+ font-family: var(--f-main);
+ font-size: 1.5rem;
+ color: var(--c-accent-dark);
+ text-decoration: none;
+ letter-spacing: -0.5px;
+ }
+
+ .hamburger-icon {
+ width: 24px;
+ height: 18px;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: relative;
+ }
+
+ /* Menu Items (Simplified) */
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 2rem;
+ }
+
+ nav a {
+ text-decoration: none;
+ color: var(--c-text-main);
+ font-weight: 500;
+ transition: color 0.3s ease;
+ }
+
+ nav a:hover {
+ color: var(--c-accent-gold);
+ }
+
+ /* Hero Section (New Structure) */
+ .hero-intro {
+ background-color: #eaddcf;
+ padding: 4rem 0;
+ text-align: center;
+ }
+
+ .hero-title {
+ font-size: 2.5rem;
+ margin-bottom: var(--s-xs);
+ }
+
+ .hero-subtitle {
+ font-family: var(--f-sans);
+ color: var(--c-accent-dark);
+ max-width: 600px;
+ margin: 0 auto;
+ }
+
+ /* Card Grid Layout */
+ .card-grid-2 {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: var(--s-md);
+ }
+
+ @media (max-width: 768px) {
+ .card-grid-2 {
+ grid-template-columns: 1fr;
+ }
+ }
+
+ /* Detail Card Style */
+ .detail-card {
+ background: var(--c-white);
+ padding: 2rem;
+ border-left: 4px solid var(--c-accent-gold);
+ box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+ }
+
+ .detail-card h3 {
+ font-size: 1.4rem;
+ margin-bottom: 1rem;
+ }
+
+ /* Fabric Guide Table Style */
+ .fabric-guide table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-top: var(--s-sm);
+ }
+ 
+ .fabric-guide th, .fabric-guide td {
+ padding: 0.8rem;
+ text-align: left;
+ border-bottom: 1px solid #eee;
+ }
+
+ .fabric-guide tr:hover {
+ background-color: #fafafa;
+ }
+
+ /* FAQ Section */
+ .faq-item {
+ border-bottom: 1px solid #ddd;
+ padding: 1rem 0;
+ }
+
+ .faq-question {
+ font-weight: bold;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ }
+
+ /* Footer */
+ footer {
+ background-color: var(--c-accent-dark);
+ color: var(--c-white);
+ padding: 3rem 0;
+ text-align: center;
+ font-size: 0.9rem;
+ }
+
+ footer a {
+ color: var(--c-accent-gold);
+ text-decoration: none;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/3) · sapporo-plumbing">
+  <meta property="og:description" content="sapporo-plumbing에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://hapjeong-shirt-room.node-link.shop/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container nav-wrapper">
+ <a href="#" class="logo-text">MzChoo.Shirts.</a>
+ 
+ <nav>
+ <ul>
+ <li><a href="#">Home</a></li>
+ <li><a href="#services">Service Guide</a></li>
+ <li><a href="#fabric">Fabric Care</a></li>
+ <li><a href="#local">Local Info</a></li>
+ </ul>
+ </nav>
+
+ <!-- Hamburger Menu -->
+ <div class="hamburger-icon">
+ <span>&#9776;</span>
+ <span>&#10095;</span>
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 54개 · 2/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0319.html">합정 셔츠룸 추천정보 기반 마포 럭셔리 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">합정 셔츠룸 추천정보를 검색하는 과정에서 많은 분이 예약 단계의 실수를 반복합니다. 특히 VIP 단체 모임은 장소의 확보뿐만 아니라 시간대별 세심한 서비스 조정이 필수적입니다. 가장 흔히 발생하는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0320.html">합정 셔츠룸 추천정보를 활용한 water server 사이트</a>
+        <p class="post-item__summary">합정 셔츠룸 추천정보를 다루는 플랫폼들이 점점 전문화되고 있습니다. 정보를 제공하는 입장에서 가장 중요한 것은 콘텐츠의 질을 유지하는 것인데, 이를 위해 정기적인 데이터 점검이 요구됩니다. 1급수처</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0321.html">합정 셔츠룸 추천정보 활용한 4</a>
+        <p class="post-item__summary">복잡한 데이터 분석과 마케팅 최적화를 위해 새로운 자동화 툴을 찾다가 코딩을 배우기로 결심하는 분들이 많습니다. 처음에는 간단한 파이썬 스크립트 작성부터 시작하지만, 곧 에이전트 기반의 복합적인 업</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0322.html">합정 셔츠룸 추천정보 확인보다 중요한 마포 유흥 투명 정찰제 가격 정보 디렉토리 이해</a>
+        <p class="post-item__summary">많은 분이 합정 셔츠룸 추천정보를 검색하며 가격이 현장에서 바뀔까 봐 걱정하지만, 이는 정보의 비대칭에서 오는 막연한 오해일 때가 많습니다. 정찰제가 정착된 현대적인 환경에서는 합리적인 가격 정책이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0353.html">합정 셔츠룸 추천정보를 찾는 초행자를 위한 마곡 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">오랜만에 만난 지인들과 저녁 식사를 마친 뒤, 다음 장소를 고민하다가 마곡 지역을 방문하게 되는 경우가 많습니다. 처음 방문하는 지역에서 유흥 시설을 찾는 일은 생각보다 복잡한 절차와 주의가 필요합</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0354.html">합정 셔츠룸 추천정보로 본 합정 노래방 추천정보의 올바른 활용</a>
+        <p class="post-item__summary">노래방은 무조건 밤늦게 가야 즐겁다는 생각은 큰 오해입니다. 합정 셔츠룸 추천정보를 찾는 분들조차 때로는 가볍게 노래를 즐기고 싶어 하지만, 시간대 선택에 따라 서비스의 질이 크게 달라질 수 있다는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0355.html">합정 셔츠룸 추천정보를 활용한 연남 클럽 추천정보 완벽 분석</a>
+        <p class="post-item__summary">클럽을 방문할 때는 적절한 인원 구성과 방문 시간, 그리고 현장 분위기를 사전에 파악하는 것이 우선입니다. 합정 셔츠룸 추천정보를 탐색하던 중에도 연남동의 자유로운 분위기를 즐기고자 하는 분들이 많</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0356.html">합정 셔츠룸 추천정보로 알아보는 합정 셔츠룸 추천정보 기준</a>
+        <p class="post-item__summary">여러분은 오늘 밤 최고의 시간을 보내기 위해 무엇을 가장 먼저 고민하시나요? 합정 셔츠룸 추천정보를 검색하는 과정에서 수많은 광고성 글에 혼란을 겪는 분들이 많습니다. 제대로 된 업체를 선정하기 위</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0357.html">합정 셔츠룸 추천정보를 바탕으로 확인하는 공덕 가라오케 추천정보의 기준</a>
+        <p class="post-item__summary">합정 셔츠룸 추천정보 탐색을 마쳤다면 이제 인근 지역으로 시야를 넓혀볼 차례입니다. 특히 공덕 지역의 유흥 시설을 고를 때는 정보의 신뢰도를 선별하는 작업이 필수적입니다. 단순히 이름만 알려진 곳보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0358.html">합정 셔츠룸 추천정보와 비교한 상수 마사지 추천정보의 가격 판단</a>
+        <p class="post-item__summary">합정 셔츠룸 추천정보를 검토하다 보면 서비스의 질과 가격 사이의 상관관계를 고민하게 됩니다. 이는 상수 지역에서 마사지 숍을 고를 때도 마찬가지로 적용되는 원리입니다. 단순히 저렴한 가격을 좇기보다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0359.html">합정 셔츠룸 추천정보에서 배우는 망원 노래방 추천정보의 예약 요령</a>
+        <p class="post-item__summary">합정 셔츠룸 추천정보를 알아보는 과정에서 많은 이들이 간과하는 것이 바로 예약의 디테일입니다. 특히 망원 지역의 인기 있는 노래방을 찾을 때는 무작정 방문했다가 낭패를 보는 경우가 적지 않습니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0360.html">합정 셔츠룸 추천정보 이용객이 주목하는 홍대 노래방 추천정보 체크리스트</a>
+        <p class="post-item__summary">합정 셔츠룸 추천정보를 통해 즐거운 경험을 쌓은 분들은 자연스럽게 인근 홍대의 노래방 문화에도 관심을 갖게 됩니다. 홍대라는 지역 특성상 수많은 업소가 밀집해 있어 어디를 선택할지 고민이 깊어질 수</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0361.html">합정 셔츠룸 추천정보를 찾는 초행자를 위한 공덕 셔츠룸 추천정보 가이드</a>
+        <p class="post-item__summary">낯선 지역에서 모임 장소를 물색하다 보면 정보의 홍수 속에서 길을 잃기 십상입니다. 특히 합정 셔츠룸 추천정보를 찾다가 공덕 인근으로 장소를 변경해야 하는 상황이 발생하면 어디서부터 확인해야 할지 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0362.html">합정 셔츠룸 추천정보를 활용하여 연남 유흥 추천정보를 알아보는 시간대별 전략</a>
+        <p class="post-item__summary">유흥 문화는 밤이 깊어야만 활발해진다는 것은 흔한 오해 중 하나입니다. 합정 셔츠룸 추천정보를 알아보는 분들이 연남 지역으로 눈을 돌릴 때도, 시간대별로 서비스의 질과 분위기가 완전히 다르다는 점을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0363.html">합정 셔츠룸 추천정보 기반 마곡 가라오케 추천정보 인원 구성별 최적화 방법</a>
+        <p class="post-item__summary">장소를 선정할 때 가장 먼저 고려해야 할 요소는 참석하는 인원의 규모와 성격입니다. 합정 셔츠룸 추천정보를 검색하는 과정에서 마곡 가라오케 추천정보로 범위를 넓히는 분들이 많아진 이유는 마곡이 가진</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-11y0cu4.html">셔츠룸 해결 방법 총정리</a>
+        <p class="post-item__summary">셔츠룸을 처음 이용하는 분들이 가장 궁금해하는 부분은 공간 구성과 서비스 흐름입니다. 입구에서 안내를 받은 후 개인실로 이동하면 편안한 분위기에서 대화를 나누거나 간단한 음료를 즐길 수 있습니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-2i8xnw.html">게임 엔진 속 옷을 입은 보스들의 숨겨진 의도</a>
+        <p class="post-item__summary">elden_ring_data_mining,boss_model_variant,file_structure_exposed,hex_dump_viz,developer_art_sketch&gt;밤 1 시 45 분,</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-1ecyj1o.html">합정 셔츠룸 추천정보</a>
+        <p class="post-item__summary">합정 지역에서 편안하고 즐거운 시간을 보내기 위해 셔츠룸을 찾는 분들이 많습니다. 셔츠룸은 일반적인 유흥 문화와 차별화된 독특한 매력을 가진 공간으로, 고객에게 맞춤형 서비스를 제공하는 것을 핵심 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-fqdp6u.html">합정 셔츠룸 추천정보 경험자에게 물어본 현실적인 판단 기준</a>
+        <p class="post-item__summary">합정 지역에서 셔츠룸을 이용하려는 분들이 가장 먼저 확인해야 할 요소는 위치 접근성, 시설 상태, 서비스 수준, 예약 편의성 그리고 가격 투명성입니다. 이러한 기준을 종합적으로 비교하면 자신에게 맞</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-002-ewinzi.html">&amp;quot;영업 실패와 성공의 비밀: 홍대 상권 업소 사례 분석&amp;quot;`</a>
+        <p class="post-item__summary">합정은 홍대와 상수 상권 사이에 위치해 유동인구 흐름이 시간대별로 크게 달라지는 지역이다. 이런 입지 특성 때문에 합정 인근 셔츠룸을 알아볼 때는 위치만 보기보다 운영 구조 전반을 함께 살펴보는 편</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
